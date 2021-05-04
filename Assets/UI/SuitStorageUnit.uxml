@@ -1,0 +1,35 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="TG.uss" />
+    <Assets.UI.TGWindow focusable="true" style="width: 400px; height: 305px;">
+        <Assets.UI.SuitStorageUnit>
+            <ui:VisualElement name="display" class="display">
+                <ui:VisualElement name="header" class="header" style="align-items: center; justify-content: flex-start; flex-direction: row; visibility: visible; display: flex;">
+                    <ui:Label text="Storage" display-tooltip-when-elided="true" class="h3" style="flex-grow: 1;" />
+                    <Assets.UI.FAButton btn-text="Lock" fa-code="" button-text="Lock" name="Lock" />
+                    <Assets.UI.FAButton fa-code="" button-text="Open" name="Open" />
+                </ui:VisualElement>
+                <ui:VisualElement name="article" style="align-items: flex-start;">
+                    <Assets.UI.FAButton btn-text="Disinfect" fa-code="" button-text="Disinfect" name="Disinfect" />
+                    <ui:ScrollView horizontal-scroller-visibility="Hidden" name="Storage" style="width: 100%; display: none;">
+                        <ui:VisualElement class="listRow">
+                            <ui:Label text="Helmet" display-tooltip-when-elided="true" name="Helmet" />
+                            <ui:Button />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="listRow">
+                            <ui:Label text="Suit" display-tooltip-when-elided="true" name="Suit" />
+                            <ui:Button />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="listRow">
+                            <ui:Label text="Mask" display-tooltip-when-elided="true" name="Mask" />
+                            <ui:Button />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="listRow">
+                            <ui:Label text="Storage" display-tooltip-when-elided="true" name="Storage" />
+                            <ui:Button />
+                        </ui:VisualElement>
+                    </ui:ScrollView>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </Assets.UI.SuitStorageUnit>
+    </Assets.UI.TGWindow>
+</ui:UXML>

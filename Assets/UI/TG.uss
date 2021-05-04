@@ -1,0 +1,126 @@
+TGWindow {
+    background-color: rgb(42, 42, 42);
+    font-size: 12px;
+    -unity-font: url('/Assets/Standard Assets/Fonts/OpenSans/OpenSansBold.ttf');
+    -unity-font-style: normal;
+    color: rgb(255, 255, 255);
+}
+
+.titlebar {
+    background-color: rgb(54, 54, 54);
+    height: 32px;
+    width: 100%;
+    border-color: rgb(22, 22, 22);
+    border-width: 1px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    flex-direction: row;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.titlebar > .title {
+    font-size: 16px;
+    color: rgb(139, 165, 196);
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.main {
+    padding: 2px 6px 0;
+}
+
+.display {
+    width: 100%;
+    padding: 4px;
+    margin: 6px 0;
+    background-color: rgba(0, 0, 0, 0.33);
+}
+
+Button {
+    background-color: rgb(64, 98, 138);
+    border-color: rgb(39, 39, 39);
+    border-width: 1px;
+    min-height: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-color: rgb(39, 39, 39);
+    border-right-color: rgb(39, 39, 39);
+    border-top-color: rgb(39, 39, 39);
+    border-bottom-color: rgb(39, 39, 39);
+    border-radius: 0;
+    margin: 0;
+    padding: 0 5px;
+    color: rgb(255, 255, 255);
+}
+
+Button:hover {
+    background-color: rgb(79, 120, 170);
+}
+
+.h3 {
+    font-size: 14px;
+    -unity-font-style: bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.header {
+    border-bottom-color: rgb(64, 98, 138);
+    border-bottom-width: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.fa {
+    -unity-font: url('/Assets/Fonts/Font Awesome 5 Free-Solid-900.otf');
+}
+
+Button.fa {
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    color: rgb(139, 165, 196);
+}
+
+Button.fa:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    color: rgb(156, 178, 205);
+}
+
+Label.fa.button {
+}
+
+.listRow {
+    flex-direction: row;
+}
+
+.listRow > Label {
+    width: 100px;
+}
+
+.listRow > Button:disabled {
+    background-color: rgb(153, 153, 153);
+}
+
+:root {
+    justify-content: center;
+    align-items: center;
+}
+
+TGWindow .unity-label {
+    color: rgb(255, 255, 255);
+}
