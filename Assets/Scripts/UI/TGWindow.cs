@@ -1,14 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Scripts.Player;
+
+using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-namespace Assets.UI
+namespace Assets.Scripts.UI
 {
 	public class TGWindow : VisualElement
 	{
         private readonly CursorLockMode oldLockMode;
         private readonly bool oldMouseVisibility;
+        private readonly InputActionMap oldActionMap;
 
         private readonly VisualElement titleBar = new VisualElement();
         private readonly Label titleLabel = new Label();
@@ -49,9 +53,11 @@ namespace Assets.UI
         {
             oldLockMode = UnityEngine.Cursor.lockState;
             oldMouseVisibility = UnityEngine.Cursor.visible;
+            oldActionMap = InputManager.Instance.playerInput.currentActionMap;
 
             UnityEngine.Cursor.lockState = CursorLockMode.None;
             UnityEngine.Cursor.visible = true;
+            InputManager.Instance.playerInput.SwitchCurrentActionMap("Menu");
 
             contentContainer = this;
 
@@ -91,6 +97,7 @@ namespace Assets.UI
                 {
                     UnityEngine.Cursor.lockState = oldLockMode;
                     UnityEngine.Cursor.visible = oldMouseVisibility;
+                    InputManager.Instance.playerInput.currentActionMap = oldActionMap;
                     Object.Destroy(UIObject);
 				}
             });

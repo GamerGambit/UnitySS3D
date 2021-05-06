@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Assets.UI
+namespace Assets.Scripts.UI
 {
 	public class SuitStorageUnit : VisualElement
     {

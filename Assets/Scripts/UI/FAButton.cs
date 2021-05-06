@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UIElements;
 
-namespace Assets.UI
+namespace Assets.Scripts.UI
 {
 	public class FAButton : VisualElement
 	{
